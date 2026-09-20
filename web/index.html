@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murach Survey</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images.jpg" alt="Murach Logo" class="logo-img">
+        </div>
+
+        <h1>Survey</h1>
+        <p>If you have a moment, we'd appreciate it if you would fill out this survey.</p>
+
+        <!-- Form gửi dữ liệu về Servlet qua phương thức POST -->
+        <form action="survey" method="post">
+            <h2>Your information:</h2>
+            
+            <div class="row">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+
+            <div class="row">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
+
+            <div class="row">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="row">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+            <h2>How did you hear about us?</h2>
+            <div class="radio-group">
+                <label><input type="radio" name="hear_about" value="Search engine" checked> Search engine</label>
+                <label><input type="radio" name="hear_about" value="Word of mouth"> Word of mouth</label>
+                <label><input type="radio" name="hear_about" value="Social Media"> Social Media</label>
+                <label><input type="radio" name="hear_about" value="Other"> Other</label>
+            </div>
+
+            <h2>Would you like to receive announcements about new CDs and special offers?</h2>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="announcements" value="yes"> YES, I'd like that.</label>
+                <label><input type="checkbox" name="email_announcements" value="yes"> YES, please send me email announcements.</label>
+            </div>
+
+            <div class="row select-row">
+                <label for="contact_by">Please contact me by:</label>
+                <select id="contact_by" name="contact_by">
+                    <option value="Email or postal mail">Email or postal mail</option>
+                    <option value="Email">Email</option>
+                    <option value="Postal mail">Postal mail</option>
+                </select>
+            </div>
+
+            <div class="button-row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
